@@ -1,11 +1,13 @@
 import Container from "react-bootstrap/Container";
 import { products } from "../data/products";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext  } from "react";
 import { ItemList } from "../components/ItemList";
 import { useParams } from "react-router-dom";
 
+
 export const ItemListContainer = (props) => {
   const [items, setItems] = useState([]);
+ 
 
   const { id } = useParams();
 
