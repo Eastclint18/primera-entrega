@@ -12,8 +12,8 @@ export const NavBar = () => {
     <Container>
       <Navbar.Brand ><NavLink to='/'>Home</NavLink></Navbar.Brand>
       <Nav className="me-auto">
-        <NavLink to="category/Teclados">Teclados</NavLink>
-        <NavLink to="category/Mouses">Mouses</NavLink>
+        <NavLink to="category/teclados">Teclados</NavLink>
+        <NavLink to="category/mouses">Mouses</NavLink>
         <NavLink to="category/Monitores">Monitores</NavLink>
       </Nav>
       <CartWidget />
