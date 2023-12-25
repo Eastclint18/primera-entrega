@@ -1,12 +1,19 @@
-import{ Link } from 'react-router-dom';
-import Cart from '../assets/cart.png';
+import { Link } from "react-router-dom";
+import Cart from "../assets/cart.png";
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 
+export const CartWidget = () => {
+  const { items } = useContext(CartContext);
 
-export const CartWidget = () => { 
-    return (
-        <Link to='/cart'>
-            <img src={Cart} alt="cart" width={50}/>
-            <span >3 </span>
-        </Link>
-    );
-}
+  const total = items.reduce(
+    (acumulador, valorActual) => acumulador + valorActual.quantity,
+    0
+  );
+  return (
+    <Link to="/cart">
+      <img src={Cart} alt="cart" width={50} />
+      <span>{total} </span>
+    </Link>
+  );
+};

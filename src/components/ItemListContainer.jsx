@@ -1,5 +1,5 @@
 import Container from "react-bootstrap/Container";
-
+import './ItemListContainer.css';
 import { useEffect, useState, useContext } from "react";
 import { ItemList } from "../components/ItemList";
 import { useParams } from "react-router-dom";

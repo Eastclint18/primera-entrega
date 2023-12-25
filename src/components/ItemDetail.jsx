@@ -7,8 +7,9 @@ export const ItemDetail = ({ item }) => {
   const { onAdd } = useContext(CartContext);
 
     
-  const add = () => {
-    onAdd(item);
+  const add = (quantity) => {
+    
+    onAdd(item,quantity);
   };
   return (
     <>
@@ -19,7 +20,8 @@ export const ItemDetail = ({ item }) => {
                 <Card.Text>
                   {item.description}
                 </Card.Text>
-                <ItemCounter onAdd={add} />
+                <h2>Stock:{item.stock}</h2>
+                <ItemCounter onAdd={add} stock={item.stock} initial={1} />
               </Card.Body>
             </Card>
     </>

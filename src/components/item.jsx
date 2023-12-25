@@ -8,13 +8,13 @@ export const Item = ({item}) => {
       
         
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={item.pictureUrl} />
+              <Card.Img variant="top" src={item.pictureUrl} width={200} />
               <Card.Body>
-                <Card.Title>{item.title}</Card.Title>
+                <Card.Title>{item.nombre}</Card.Title>
                 <Card.Text>
                   {item.description}
                 </Card.Text>
-                <Link to={`/items/${item.id}`}><Button variant="primary">Go somewhere</Button></Link>
+                <Link to={`/items/${item.id}`}><Button variant="primary">Agregar al Carro</Button></Link>
               </Card.Body>
             </Card>
           );
